@@ -1,1 +1,60 @@
 
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siam Temp Mail</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+      text-align: center;
+    }
+    .card {
+      max-width: 420px;
+      margin: 50px auto;
+      padding: 24px;
+      background: #1e293b;
+      border-radius: 18px;
+    }
+    h1 { color: #60a5fa; }
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 13px;
+      margin-top: 12px;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>SIAM TEMP MAIL</h1>
+    <p>আপনার অস্থায়ী ইমেইল সেবা</p>
+    <input id="email" placeholder="ইমেইল ঠিকানা এখানে আসবে" readonly>
+    <button onclick="makeEmail()">ইমেইল তৈরি করুন</button>
+    <p id="message">স্বাগতম!</p>
+    <p>ইনবক্স: এখনো সংযুক্ত নয়</p>
+  </div>
+  <script>
+    function makeEmail() {
+      document.getElementById('email').value =
+        'siam' + Math.random().toString(36).slice(2, 8) +
+        '@example.com';
+      document.getElementById('message').textContent =
+        'এটি শুধু ডেমো ঠিকানা, আসল ইমেইল নয়।';
+    }
+  </script>
+</body>
+</html>
